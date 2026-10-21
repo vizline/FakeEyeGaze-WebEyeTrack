@@ -9,9 +9,9 @@ const patches = [
   ['nine calibration points', 'void 0===e&&(e=5),void 0===t&&(t=60)', 'void 0===e&&(e=9),void 0===t&&(t=60)'],
   ['SVD least-squares affine fit', '(0,u.solve)(r,s).transpose()', '(0,u.solve)(r,s,!0).transpose()'],
   [
-    'calibration promise restores worker status',
+    'calibration failure is contained without pausing incoming frames',
     'i.handleClick(r.x,r.y),u="idle",self.postMessage({type:"statusUpdate",status:u}),[3,8]',
-    'i.handleClick(r.x,r.y).catch(function(err){console.warn("[WebEyeTrack patch] calibration update failed:",err&&err.message||err)}).finally(function(){u="idle",self.postMessage({type:"statusUpdate",status:u})}),[3,8]'
+    'i.handleClick(r.x,r.y).catch(function(err){console.warn("[WebEyeTrack patch] calibration update failed:",err&&err.message||err)}),u="idle",self.postMessage({type:"statusUpdate",status:u}),[3,8]'
   ],
   [
     'failed frame recovery',

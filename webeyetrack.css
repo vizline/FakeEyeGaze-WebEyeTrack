@@ -11,3 +11,10 @@
   background: #111;
   transform: scaleX(-1);
 }
+
+#webcam.calibration-preview {
+  width: 140px;
+  height: 105px;
+  left: 10px;
+  top: 10px;
+}
