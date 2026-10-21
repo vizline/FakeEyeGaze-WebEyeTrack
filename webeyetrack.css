@@ -1,0 +1,13 @@
+#webcam {
+  position: fixed;
+  left: 14px;
+  top: 14px;
+  width: 220px;
+  height: 165px;
+  object-fit: cover;
+  z-index: 100000;
+  border: 3px solid #17202a;
+  border-radius: 10px;
+  background: #111;
+  transform: scaleX(-1);
+}
